@@ -31,9 +31,9 @@ Seleccionamos estas webs debido a que nos parecieron las mas amigables para el u
 
 **Pablo Hernandez**
 
-- Edad:
-- Ocupación:
-- Tiempor libre:
+- Edad: 28 años
+- Ocupación: Licenciado en Administración de Empresas   
+- Tiempo libre: Pablo disfruta mucho el cine, el fútbol y el ajedrez. 
 
 **Matias Perassi**
 
