@@ -28,9 +28,9 @@ Seleccionamos estas webs debido a que nos parecieron las mas amigables para el u
 - Tiempo libre: a Tomas le encanta jugar al basket en su tiempo libre.
 
 **Pablo Hernandez**
-- Edad:
-- Ocupación:
-- Tiempor libre:
+- Edad: 28 años
+- Ocupación: Licenciado en Administración de Empresas   
+- Tiempo libre: Pablo disfruta mucho el cine, el fútbol y el ajedrez. 
 
 **Matias Perassi**
 - Edad:
