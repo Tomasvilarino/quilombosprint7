@@ -2,7 +2,7 @@
 
 
 ### Acerca de nuestro proyecto
-Debido a la situacion que estamos viviendo, las ventas de bebidas alcoholicas han subido exponencialmente, por ese motivo decidimos realizar un e-commerce de dicho producto para que el usuario pueda realizar sus compras desde la comodidad de su casa. Nuestro producto estara orientando a jovenes y adultos entre las edades de 18 a 45 años.
+Debido a la situacion que estamos viviendo, las ventas de bebidas alcoholicas han subido exponencialmente, por ese motivo decidimos realizar un e-commerce de dicho producto, para que el usuario pueda realizar sus compras desde la comodidad de su casa. Nuestro producto estara orientando a jovenes y adultos entre las edades de 18 a 45 años.
 
 ![](https://i.pinimg.com/originals/f2/5a/af/f25aaf926b65fc01d4c4efc7bec73746.jpg)
 
