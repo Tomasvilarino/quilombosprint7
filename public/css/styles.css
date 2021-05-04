@@ -378,6 +378,7 @@ main section div.products article{
 {
     width: 50%;
 }
+}
 
 @media screen and (min-width: 769px) {
   .menu-principal{
@@ -455,6 +456,82 @@ main section div.products article{
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
   }
-
-
 }
+
+/* Register - Login */
+
+.registro-login .facebook {
+margin: auto;
+margin-top: 40px;
+margin-bottom: 20px;
+width: 220px;
+}
+
+.registro-login .facebook a {
+display: flex;
+text-decoration: none;
+background-color: #3b5998;
+color: white;
+padding: 1%;
+justify-content: flex-start;
+max-width: 250px;
+}
+
+.registro-login .facebook i {
+margin-left: 2%;
+align-self: center;    
+}
+
+.registro-login .registrate-con-facebook {
+text-align: center;
+align-self: center;
+width: 100%;
+}
+
+.registro-login .division {
+display: flex;
+justify-content: center;
+margin-bottom: 22px;
+height: 10px;
+}
+
+.registro-login .linea {
+border-bottom: solid black 1px;
+width: 78px;
+}
+
+.registro-login .o {
+margin-left: 8px;
+margin-right: 8px;
+font-size: 16px;
+}
+
+.registro-login .registrate-con-email {
+text-align: center;
+margin-bottom: 20px;
+font-size: 16px;
+}
+
+.registro-login .datos {
+margin-bottom: 20px;
+text-align: center;
+}
+
+.registro-login .datos input {
+width: 250px;
+font-size: 14px;
+}
+
+.registro-login .checkbox {
+font-size: 12px;
+width: 250px;
+margin: auto;
+margin-bottom: 20px;
+}
+
+.registro-login .boton-rl {
+width: 130px;
+font-size: 16px;
+margin: auto;
+}
+
