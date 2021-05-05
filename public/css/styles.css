@@ -322,7 +322,7 @@ article div.articulos{
 }
 
 .otras-opciones{
-  height: 800px;
+  height: 560px;
   width: 100%;
   position: relative;
   margin-top: 20px;
@@ -648,7 +648,7 @@ margin-left: 2%;
 
 
 /*carrito*/
-
+/*
 .contenedor{
 
 	max-width: 1200px;
@@ -894,76 +894,76 @@ margin-left: 2%;
 .productos-recomendados{
     display: flex;
 }
-
+*/
 
 /***************footer**********************/
+
 footer {
-  width: 100vw;
-  height: 150px;
-  
-  background-color: #424874;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+background-color: #424874;
+display: flex;
+justify-content: space-between;
+font-size: 12px;
 }
 
 footer .titulos {
-  color: #b4b3b7;
-  
+color: #b4b3b7;
+font-size: 14px;
 }
 
-footer .preguntas-frecuentes{
-  width: 50%;
-  padding: 10px;
-
+footer .preguntas-frecuentes {
+padding-left: 30px;
 }
 
-footer .empresas{
-  width: 50%;
-  padding: 10px;
+footer .titulos {
+text-align: start;
 }
 
-footer ul li{
-  list-style-type: none;
-  text-align: start;
-  line-height: 25px;
+footer .preguntas-frecuentes ul {
+padding-left: 0px;
+}
+
+footer ul li {
+list-style-type: none;
+text-align: start;
+line-height: 22px;
+}
+
+footer .empresas ul {
+padding-left: 0px;
 }
 
 footer ul li a{
-  color:#b4b3b7 ;
+color:#b4b3b7 ;
 }
 
 footer .redes{
-  text-align: center;
-  width: 50%;
+padding-right: 30px;
+}
 
-  
-}
 footer .redes p{
-  color: #b4b3b7;
+color: #b4b3b7;
 }
-footer .redes a{
-  text-decoration: none;
-  color: #b4b3b7;
-  font-size: 24px;
-  margin: 5px;
-  
-  
+
+footer .redes a {
+text-decoration: none;
+color: #b4b3b7;
+font-size: 24px;
+margin: 5px;  
 }
-footer .facebook:hover{
-  color:white;
-  font-size: 26px;
-  
+
+footer .facebook:hover {
+color:white;
+font-size: 26px;  
 }
-footer .instagram:hover{
-  color:white;
-  font-size: 26px;
-  
+
+footer .instagram:hover {
+color:white;
+font-size: 26px;
 }
-footer .mail:hover{
-  color:white;
-  font-size: 26px;
-  
+
+footer .mail:hover {
+color:white;
+font-size: 26px;  
 }
 
 
@@ -1064,12 +1064,6 @@ nav{
 
 @media (min-width: 1200px) {
  /************* menu ****************************/
- header{
-  margin: 20px auto;
-  max-width: 1200px;
-
-}
-    
   .producto {
     display: inline-block;
     max-width: 1200px;
