@@ -150,26 +150,86 @@ body{
 }
 
 /*slider*/
-
-/* SLIDER*/
-.banner img{
+.slider{
   width: 100%;
-  height: 450px;
+  overflow: hidden;
+  margin: auto;
+}
+/* aca es*/
+.slider ul{
+  display: flex;
+  align-items:center;
+  width: 300%;
+  padding: 0;
+  animation: cambio 20s infinite;
+  animation-direction: alternate;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+
+.slider img{
+  width: 100%;
+  height: 400px;
   object-fit: cover;
 }
+
+@keyframes cambio{
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+  
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+}
+
+/*--------------*/
 .envios{
   justify-content: center;
   width: 100%;
 }
+/*--------------*/
+/*slider 2*/
+.slider2{
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+/* aca es*/
+.slider2 ul{
+  display: flex;
+  align-items:center;
+  width: 300%;
+  padding: 0;
+  animation: cambio 20s infinite;
+  animation-direction: alternate;
+  margin-bottom: 0;
+  margin-top: 0;
+}
 
-.banner2 img{
-  width: 90%;
-  height: 450px;
+.slider2 li{
+  width: 100%;
+  list-style: none;
+}
+
+.slider2 img{
+  width: 100%;
+  height: 600px;
   object-fit: cover;
-  margin-top: 05px;
-  justify-content: center;
-  margin-left: 5%;
+}
 
+@keyframes cambio{
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+  
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
 }
 /*botones de envio*/
 .botonE{
@@ -404,9 +464,7 @@ main section article img{
   font-weight: 600;
 }
 
-
-
-.burger-menu {
+.burger-menu{
     display: none;
 }
   
@@ -478,6 +536,10 @@ main section article img{
     width:80px;
     height: 80px;
   }
+
+  
+
+
 }
 
 /* Register - Login */
