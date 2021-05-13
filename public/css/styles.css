@@ -621,9 +621,14 @@ margin-bottom: 20px;
 }
 
 .registro-login .boton-rl {
-width: 130px;
+width: 250px;
 font-size: 16px;
 margin: auto;
+}
+
+.boton-rl:hover{
+  background-color: #424874;
+  color: #fff;
 }
 
 
