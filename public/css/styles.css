@@ -43,7 +43,6 @@ body{
   flex-wrap: nowrap;
   align-self: flex-end;
   justify-content: center;
-  padding-left: 150px;
 }
 
 /* Menu principal*/
@@ -57,7 +56,7 @@ body{
   text-decoration: none;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 600
+  font-weight: 600;
 }
 /* Botones del menu principal */
 .topnav a:hover {
@@ -167,6 +166,7 @@ body{
   margin-top: 0;
 }
 
+
 .slider li{
   width: 100%;
   list-style: none;
@@ -189,6 +189,13 @@ body{
   70% {margin-left: -200%;}
 }
 
+@media (max-width: 550px){
+  .slider ul{
+    display: none;
+  }
+}
+
+
 /*--------------*/
 .envios{
   justify-content: center;
@@ -205,10 +212,9 @@ body{
 .slider2 ul{
   display: flex;
   align-items:center;
-  width: 300%;
+  justify-content: center;
+  width: 100%;
   padding: 0;
-  animation: cambio 20s infinite;
-  animation-direction: alternate;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -220,17 +226,10 @@ body{
 
 .slider2 img{
   width: 100%;
-  height: 550px;
+  height: 100%;
   object-fit: cover;
 }
 
-@keyframes cambio{
-  0% {margin-left: 0;}
-  20% {margin-left: 0;}
-  
-  25% {margin-left: -90%;}
-  45% {margin-left: -90%;}
-}
 /*botones de envio*/
 .botonE{
   background-color:#dcd6f7 ;
@@ -323,6 +322,7 @@ main{
 main section article{
   background-color: #fff;    
   margin: 10px 0px;
+  transition: all 0.25s;
 }
 
 
@@ -332,13 +332,13 @@ main section article:hover .description {
 }
 
 main section article:hover {
+  transform: translateY(-15px);
   box-shadow: 0px 0px 10px rgb(100, 100,100);
 }
 
 
 main section article img{
   width: 100%;
-  height: 80vh;
 }
 
 main section article i{
@@ -439,40 +439,33 @@ main section div.products article{
 }
 main section article img{
   width: 100%;
-  height: 400px;
+  height: 60vh;
 }
 .slider ul{
-  display: flex;
-  align-items:center;
-  width: 300%;
-  padding: 0;
-  animation: cambio 20s infinite;
-  animation-direction: alternate;
-  margin-bottom: 0;
-  margin-top: 0;
+  display: none;
 }
+.slider2 img{
+  width: 150vw;
+}
+
 }
 
 @media screen and (min-width: 769px) {
   .menu-principal{
-    display: flex;
+    display: none;
 }
 
 .topnav a {
   display: flex;
   flex-wrap: nowrap;
-  float: center;
   color: #a6b1e1;
-  text-align: center;
-  padding: 0 9px;
-  text-decoration: none;
-  font-size: 13px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
+  padding: 0 15px;
+  font-size: 14px;
+  
 }
 
 .burger-menu{
-    display: none;
+    display: flex;
 }
   
   main section div.products article{
@@ -500,8 +493,17 @@ main section article img{
     width: 100%;
     height: 350px;
   }
+  .slider ul{
+    display: flex;
+    }
+  
+  .slider2 img{
+    width: 250vw;
+    height: 620px;
+    object-fit: cover;
+    }
 
-}
+  }
 
 
 
@@ -521,13 +523,17 @@ main section article img{
     width: 10%;
   }
 
+
+  .menu-principal{
+    padding-left: 50px;
+  }
   .topnav a {
     display: flex;
     flex-wrap: nowrap;
     float: center;
     color: #a6b1e1;
     text-align: center;
-    padding: 0 25px;
+    padding: 0 30px;
     text-decoration: none;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
@@ -536,7 +542,7 @@ main section article img{
 
   main section article img{
     width: 100%;
-    height: 500px;
+    height: 600px;
   }
 
   .logo img {
@@ -544,7 +550,11 @@ main section article img{
     height: 80px;
   }
 
-  
+  .slider2 img{
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+  }
 
 
 }
