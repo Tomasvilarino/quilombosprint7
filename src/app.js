@@ -3,16 +3,20 @@ const path = require ("path");
 const app = express(); 
 const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath)); 
-const mainRouter = require ("./routes/main")
-const productsRouter = require("./routes/products")
+const mainRouter = require ("./routes/main");
+const productsRouter = require("./routes/products");
+const usersRouter = require("./routes/users")
 
-//Rutas
+//Rutas Main
 app.use("/",mainRouter);
-app.use("/registro", mainRouter)
-app.use("/login", mainRouter)
 
-app.use("/products", productsRouter)
-app.use("/products", productsRouter)
+//Rutas Users
+app.use("/users", usersRouter)
+app.use("/users", usersRouter)
+
+//Rutas Products
+app.use("/products", productsRouter) 
+
 
 //EJS
 app.set("view engine", "ejs");

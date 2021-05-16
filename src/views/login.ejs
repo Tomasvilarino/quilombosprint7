@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<%- include('./partials/head') %>
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Drinking Time </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
 <body>
     <!-- Header -->
-  
-    <%- include('./partials/header') %>
-
+    <header class="main-header">
+        <div class="logo">
+            <a href="/"><img src="/images/ultimointento.png" alt="logo Drinking"></a>
+        </div>
+        
+        <div class="menu-principal">
+            <div class="topnav">
+                <a href="/Cervezas">Cervezas</a>
+                <a href="/Vinos">Vinos</a>
+                <a href="/Licores">Licores</a>
+                <a href="/Packs">Packs</a>
+                <a href="/Gift Cards">Gift Cards</a>
+                <a href="/Extras">Extras</a>
+            </div>
+        </div>
+        <div class="menu-secundario">
+    
+            <div class="burger-menu">
+                <button id="burger-btn"><i class="fas fa-bars"></i></button>
+                <div class="topnav-burger">
+                    <a href="/Home">Home</a>
+                    <a href="/Cervezas">Cervezas</a>
+                    <a href="/Vinos">Vinos</a>
+                    <a href="/Licores">Licores</a>
+                    <a href="/Packs">Packs</a>
+                    <a href="/Gift Cards">Gift Cards</a>
+                    <a href="/Extras">Extras</a>
+                </div>
+            </div>
+    
+            <a href="/carrito"><button id="iconos" class="fas fa-store" alt="carrito"></button></a>
+                
+                    <a href=#buscar><button id="iconos" class="fas fa-search"></button></a>
+            <a href="/login"><button id="iconos" class="fas fa-user-ninja"></button></a>
+            <a href="/registro"><button id="iconos" class="fas fa-id-badge"></button></a>
+        </div>
+    </header>
     <!-- Sección principal -->
     <section class="registro-login">
         <div class="facebook"> 
@@ -37,9 +80,30 @@
             </div>
         </form>
     </section>
- 
-    <%- include('./partials/footer') %>  
-
+    <footer>
+        <section class="preguntas-frecuentes">
+            <h3 class="titulos"> Preguntas frecuentes</h3>
+            <ul>
+                <li><a href="#"> ¿Cómo comprar? </a></li>
+                <li><a href="#"> Costos de envios </a></li>
+                <li><a href="#"> Boton de arrepentimiento </a></li>
+            </ul>
+        </section>
     
+        <section class="empresas">
+            <h3 class="titulos">Empresas</h3>
+            <ul>
+                <li><a href="#"> Eventos </a></li>
+                <li><a href="#"> Regalos empresariales </a></li>
+            </ul>
+        </section>
+
+        <div class="redes">
+            <p>Sigamos en contacto</p>
+            <a class="facebook" href=""><i class="fab fa-facebook"></i></a>
+            <a class="instagram" href=""><i class="fab fa-instagram"></i></a>
+            <a class="mail" href=""><i class="fas fa-at"></i></a>
+        </div>
+    </footer>    
 </body>
 </html>
