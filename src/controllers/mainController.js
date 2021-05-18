@@ -1,21 +1,7 @@
-const path = require("path")
+const path = require ('path')
 
-let controller = {
-    home: (req,res) =>{
-        return res.render("index")
-    
-    },
+let mainController = {
+home: (req, res) => res.render (path.join (__dirname, '../views/home.ejs')),
+}
 
-    register:(req,res) =>{
-        return res.render("register")
-    },
-    
-    login: (req,res) =>{
-        return res.render("login")
-        
-    }
-        
-    }
-
-
-module.exports = controller;
+module.exports = mainController

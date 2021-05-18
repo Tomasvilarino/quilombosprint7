@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<%- include('./partials/head') %>
-
+<%- include ('../partials/head.ejs') %>
 <body>
     <!-- Header -->
-  
-    <%- include('./partials/header') %>
-
+    <%- include ('../partials/header.ejs') %>
     <!-- Sección principal -->
     <section class="registro-login">
         <div class="facebook"> 
@@ -33,13 +29,10 @@
                 <button class="boton-rl" type="submit"> Ingresá </button>
             </div>
             <div class="datos"> 
-                ¿Todavía no sos cliente? Registrate <a href="/registro"> acá </a> 
+                ¿Todavía no sos cliente? Registrate <a href="/users/register"> acá </a> 
             </div>
         </form>
     </section>
- 
-    <%- include('./partials/footer') %>  
-
-    
+    <%- include ('../partials/footer.ejs') %>    
 </body>
 </html>

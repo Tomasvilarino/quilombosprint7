@@ -1,15 +1,9 @@
-const path = require("path")
+const path = require ('path')
 
-let controller = {
-    carrito:(req,res) =>{
-        return res.render("carrito")
-    },
-    
-    detalleDeProducto:(req,res) =>{
-        return res.render("desc-product")
-    }
+let productsController = {
+detalle: (req, res) => res.render (path.join (__dirname, '../views/products/detalle.ejs')),
+create: (req, res) => res.render (path.join (__dirname, '../views/products/create.ejs')),
+edit: (req, res) => res.render (path.join (__dirname, '../views/products/edit.ejs')),
 }
 
-module.exports = controller;
-
-
+module.exports = productsController

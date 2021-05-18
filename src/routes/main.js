@@ -1,12 +1,11 @@
-const express = require("express");
-const path = require ("path");
-const controller = require("../controllers/mainController");
-const router = express.Router();
+const express = require ('express')
 
-router.get("/", controller.home)
+const router = express.Router ()
 
-router.get("/registro", controller.register)
+const path = require ('path')
 
-router.get("/login", controller.login)
+let mainController = require ('../controllers/mainController')
 
-module.exports = router;
+router.get ('/', mainController.home)
+
+module.exports = router

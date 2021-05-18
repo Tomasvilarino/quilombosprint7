@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include('./partials/head') %>
-
+<%- include ('./partials/head.ejs') %>
 <body>
-    
-    <%- include('./partials/header') %>
-
+    <%- include ('./partials/header.ejs') %>  
         <div class="slider">
         <ul>
             <li><img src="/images/slider1.jpg"/></li>
@@ -23,10 +19,11 @@
         <button type="submit" class="botonE">Ver costos de envio</button>
             </span>
             <h3>Los preferidos de la semana</h3>
-            
+           
             <div class="slider2">
                 <ul>
                 <a href="#"><li><img src="/images/slider2.jpg"/></li></a>
+                <a href="#"> <li><img src="/images/slider2.jpg"/></li></a>
                 </ul>
                 </div>
         <h3>Los destacados del mes</h3>
@@ -34,7 +31,7 @@
             <section class="last-visit">
                 <div class="products">
                     <article>
-                        <a href="products/detalledeproducto"><img src="images/vino.jpg" alt="Vino" class="Vino"></a>
+                        <a href="/products/detalle"><img src="/images/vino.jpg" alt="Vino" class="Vino"></a>
                         <div class="articulos">
                             <i class="fas fa-shipping-fast"></i>
                             <p class="price">$1.650</p>
@@ -42,7 +39,7 @@
                         </div>
                     </article>
                     <article>
-                        <a href="products/detalledeproducto"><img src="images/jackdaniels.jpg" alt="jackdaniel" class="jackdaniel"></a>
+                        <a href="/products/detalle"><img src="/images/jackdaniels.jpg" alt="jackdaniel" class="jackdaniel"></a>
                         <div class="articulos">
                             <i class="fas fa-shipping-fast"></i>
                             <p class="price">$4.500</p>
@@ -50,7 +47,7 @@
                         </div>
                     </article>
                     <article>
-                        <a href="products/detalledeproducto"><img src="images/licor.jpg" alt="Promo" class="Promo"></a>
+                        <a href="/products/detalle"><img src="/images/licor.jpg" alt="Promo" class="Promo"></a>
                         <div class="articulos">
                             <i class="fas fa-shipping-fast"></i>
                             <p class="price">$2.500</p>
@@ -60,17 +57,13 @@
                 </section>  
                     <h3>Otras opciones</h3>
                 <section class="otras-opciones">
-                    <img src="images/otras-opciones.jpg" alt="Promo" class="Peroni">
+                    <img src="/images/otras-opciones.jpg" alt="Promo" class="Peroni">
                     <p>Lo queres? Lo tenemos.
                         Tinto, hay. Whisky? Tenemos. Esa IPA explosiva que probaste en tu bar favorito? Tambien
                     </p>
                 </section>
 
-</main>
-
-
-<%- include('./partials/footer') %>
-
-
+        </main>
+    <%- include ('./partials/footer.ejs') %>  
 </body>
 </html>

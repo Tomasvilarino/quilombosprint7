@@ -32,11 +32,6 @@ Seleccionamos estas webs debido a que nos parecieron las mas amigables para el u
 - Ocupación: Licenciado en Administración de Empresas   
 - Tiempo libre: Pablo disfruta mucho el cine, el fútbol y el ajedrez. 
 
-**Matias Perassi**
-- Edad:
-- Ocupación:
-- Tiempor libre:
-
 **Eugenia Molina**
 - Edad: 32 años
 - Ocupación: Agente de la Dir. nacional de Migraciones

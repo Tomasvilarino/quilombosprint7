@@ -1,11 +1,13 @@
-const express = require("express");
-const path = require ("path");
-const router = express.Router();
-const controller = require("../controllers/productsController");
+const express = require ('express')
 
+const router = express.Router ()
 
-router.get("/carrito", controller.carrito);
+let productsController = require ('../controllers/productsController')
 
-router.get("/detalledeproducto", controller.detalleDeProducto)
+router.get ('/detalle', productsController.detalle) 
 
-module.exports = router;
+router.get ('/create', productsController.create)
+
+router.get ('/edit', productsController.edit)
+
+module.exports = router

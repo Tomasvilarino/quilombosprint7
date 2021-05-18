@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <!-- Header -->    
+    <%- include('../partials/header') %>
+    <!-- Sección principal -->
+    <section class="registro-login">
+        <div class="registrate-con-email"> Carga un nuevo producto </div>
+        <form class="form" action="/" method="GET">
+            <!-- Nombre del Producto -->
+            <div class="datos">
+                <input type="text" name="nombreDelProducto" placeholder="Nombre del Producto">    
+            </div>
+            <!-- Descripción del Producto -->
+            <div class="datos">
+                <textarea class="datos" name="descripcionDelProducto"> Descripción del Producto </textarea>    
+            </div>
+            <!-- Imágenes --> 
+            <div class="datos">
+                <input type="file" name="imagenesDelProducto" multiple>    
+            </div>              
+            <!-- Categoría --> 
+            <div>
+                <div class="checkbox"> Categoría: </div>
+                <div class="checkbox">
+                <label> <input type="radio" name="categoria" value="Vinos"> Vinos </label>
+                </div>
+                <div class="checkbox">
+                <label> <input type="radio" name="categoria" value="Espirituosas"> Espirituosas </label>
+                </div>
+                <div class="checkbox">
+                <label> <input type="radio" name="categoria" value="Cervezas"> Cervezas </label>
+                </div>
+                <div class="checkbox">
+                <label> <input type="radio" name="categoria" value="Licores"> Licores </label>
+                </div> 
+            </div>
+            <!-- Precio --> 
+            <div class="datos">
+                <input type="text" name="precio" placeholder="Precio (Ej: $ 799,99)" value="">    
+            </div>
+            <!-- Stock -->
+            <div class="datos">
+                <input type="text" name="stock" placeholder="Stock (Ej: 100 unidades)" value="">    
+            </div>
+            <!-- Enviar -->
+            <div class="datos">
+                <button class="boton-rl" type="submit"> Enviar </button>
+            </div>
+            <div class="datos">
+                <button class="boton-rl" type="reset"> Borrar </button>
+            </div>
+        </form>
+    </section>
+    <%- include('../partials/footer') %>
+</body>
+</html>
