@@ -6,15 +6,16 @@
     <%- include('../partials/header') %>
     <!-- Sección principal -->
     <section class="registro-login">
-        <div class="registrate-con-email"> Carga un nuevo producto </div>
+        <div class="carga-un-nuevo-producto"> Editá el producto </div>
         <form class="form" action="/" method="GET">
             <!-- Nombre del Producto -->
             <div class="datos">
                 <input type="text" name="nombreDelProducto" placeholder="Nombre del Producto">    
             </div>
             <!-- Descripción del Producto -->
-            <div class="datos">
-                <textarea class="datos" name="descripcionDelProducto"> Descripción del Producto </textarea>    
+            <div class="categoria-create-edit"> Descripción del Producto: </div>
+            <div class="datos" >
+                <textarea class="descripcion-del-producto-create-edit" name="descripcionDelProducto"> </textarea>    
             </div>
             <!-- Imágenes --> 
             <div class="datos">
@@ -22,17 +23,17 @@
             </div>              
             <!-- Categoría --> 
             <div>
-                <div class="checkbox"> Categoría: </div>
-                <div class="checkbox">
+                <div class="categoria-create-edit"> Categoría: </div>
+                <div class="create-edit-checkbox">
                 <label> <input type="radio" name="categoria" value="Vinos"> Vinos </label>
                 </div>
-                <div class="checkbox">
+                <div class="create-edit-checkbox">
                 <label> <input type="radio" name="categoria" value="Espirituosas"> Espirituosas </label>
                 </div>
-                <div class="checkbox">
+                <div class="create-edit-checkbox">
                 <label> <input type="radio" name="categoria" value="Cervezas"> Cervezas </label>
                 </div>
-                <div class="checkbox">
+                <div class="create-edit-licores">
                 <label> <input type="radio" name="categoria" value="Licores"> Licores </label>
                 </div> 
             </div>
@@ -46,10 +47,10 @@
             </div>
             <!-- Enviar -->
             <div class="datos">
-                <button class="boton-rl" type="submit"> Enviar </button>
+                <button class="boton-create-edit" type="submit"> Enviar </button>
             </div>
             <div class="datos">
-                <button class="boton-rl" type="reset"> Borrar </button>
+                <button class="boton-create-edit" type="reset"> Borrar </button>
             </div>
         </form>
     </section>
