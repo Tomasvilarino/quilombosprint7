@@ -1,26 +1,28 @@
-const express = require ("express")
-
-const path = require ("path")
-
+const express = require ("express");
+const path = require ("path");
 const app = express(); 
+const publicPath = path.resolve(__dirname, "../public");
+app.use(express.static(publicPath)); 
+const mainRouter = require ("./routes/main");
+const productsRouter = require("./routes/products");
+const usersRouter = require("./routes/users")
 
-app.use (express.static (path.join (__dirname, '../public'))) 
+//Rutas Main
+app.use("/",mainRouter);
 
-app.set ('view engine', 'ejs')
+//Rutas Users
+app.use("/users", usersRouter)
+app.use("/users", usersRouter)
 
-app.listen (1050, () => console.log ("El Servidor esta corriendo en el puerto 1050"))
-
-const routesMain = require ('./routes/main')
-
-app.use ("/", routesMain)
-
-const routesProducts = require ('./routes/products')
-
-app.use ("/products", routesProducts)
-
-const routesUsers = require ('./routes/users')
-
-app.use ("/users", routesUsers)
+//Rutas Products
+app.use("/products", productsRouter) 
 
 
+//EJS
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
+//LocalHost
+app.listen(1050, () => {
+    console.log("El Servidor esta corriendo en el puerto 1050")
+})
