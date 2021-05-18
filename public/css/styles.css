@@ -622,8 +622,8 @@ text-align: center;
 }
 
 .registro-login .datos input {
-width: 250px;
-font-size: 14px;
+width: 300px;
+font-size: 19px;
 }
 
 .registro-login .checkbox {
@@ -634,9 +634,18 @@ margin-bottom: 20px;
 }
 
 .registro-login .boton-rl {
-width: 130px;
-font-size: 16px;
-margin: auto;
+  padding: 10px;
+  margin: 20px;
+  position: relative;
+  color: #FFF;
+  font-size: 18px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.boton-rl:hover{
+  background-color: #424874;
+  color: #fff;
 }
 
 
