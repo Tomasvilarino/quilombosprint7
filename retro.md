@@ -1,4 +1,4 @@
-# Retrospectiva Sprint 2 Grupo 9: 
+# Retrospectiva Sprint 2: 
 
 ## Que estamos haciendo bien:
 
@@ -20,4 +20,26 @@
 
 - Mantener la buena comunicacion y la organizacion.
 - Seguir ayudandonos y trabanjando como equipo.
+
+# Restrospectiva Sprint 3:
+
+## Que estamos haciendo bien:
+
+- EL flujo de trabajo fue mejor que el sprint pasado.
+- Hubo mas organizacion y reuniones para coordinar mejor.
+
+## Que estamos haciendo mal:
+
+- No nos repartimos las responsabilidades de la mejor manera.
+
+## Que deberiamos empezar a hacer:
+
+- Usar Trello para organizarnos aun mas facilmente.
+
+## Que tenemos que seguir haciendo:
+
+- Mantener la buena comunicacion y la organizacion.
+- Seguir ayudandonos y trabanjando como equipo.
+
+
 
