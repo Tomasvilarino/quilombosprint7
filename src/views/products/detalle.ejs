@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../partials/head.ejs') %>
+<body>
+    <%- include ('../partials/header.ejs') %>
+    <main>
+        <section>
+            <h2>Detalle del Producto</h2>
+        <section class='producto'>
+
+                <figure>
+                    <div class='img-principal'>
+                        <img src="../images/<%=products.imagenes ? products.imagenes : 'productDefault.jpg' %>" alt="imagen principal">
+                    </div>
+
+                    <div class='img-secundarias'>
+                        <img src="./images/" alt="img secundaria" class="img-sec-1">
+                        <img src="./images/" alt="img secundaria" class="img-sec-2">
+                        <img src="./images/" alt="img secundaria" class="img-sec-3">
+                        <img src="./images/" alt="img secundaria" class="img-sec-4">
+                    </div>
+            </figure>
+
+            <div class='info-producto-principal'>
+                <p> <%= products.nombre %> </p>
+                <p> <%= products.precio %> </p>
+
+                <article class='descripcion'>
+                    <p> <%= products.descripcion %> </p>
+                </article>
+
+            <div class='compras'>
+                <span class="añadir-carrito">  
+                <button type="submit" class="botones">Añadir al carrito</button>
+                </span> 
+                <span class="compra">
+                <button type="submit" class="botones">Comprar</button>
+                </span>
+            </div>
+
+
+            </div>       
+
+        </section>
+
+        <div class="envios">
+            <span class="boton1">
+            <button type="submit" class="boton">Tiempos de envio</button>            
+        </span>
+        <span class="boton2">    
+        <button type="submit" class="boton">Ver costos de envio</button>
+        </span>
+
+        </div>
+
+        <h2>Productos Relacionados</h2>
+        <section class='productos-relacionados'>
+            <article class='articulo'>
+
+                <div class='img-relacionados'>
+                    <img src="../images/be70441_1.jpg" alt="imigen principal">
+                </div>
+
+                <div class='info-relacionado'>
+                    <p>Nombre Del Producto</p>
+                    <p>$ 3000</p>
+                </div>
+
+            </article>
+
+            <article class='articulo'>
+                <div class='img-relacionados'>
+                    <img src="../images/be25552_2.jpg" alt="imigen principal">
+                </div>
+                <div class='info-relacionado'>
+                    <p>Nombre Del Producto</p>
+                    <p>$ 3000</p>
+                </div>
+            </article>
+            <article class='articulo'>
+                <div class='img-relacionados'>
+                    <img src="../images/be03032_1.jpg" alt="imigen principal">
+                </div>
+                <div class='info-relacionado'>
+                    <p>Nombre Del Producto</p>
+                    <p>$ 3000</p>
+                </div>
+            </article>
+            <article class='articulo'>
+                <div class='img-relacionados'>
+                    <img src="../images/be21617.jpg" alt="imigen principal">
+                </div>
+                <div class='info-relacionado'>
+                    <p>Nombre Del Producto</p>
+                    <p>$ 3000</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <%- include ('../partials/footer.ejs') %>
+</body>
+</html>
+        </section>
+    </main>
+
+</body>
+</html>

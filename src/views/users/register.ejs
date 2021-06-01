@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../partials/head.ejs') %>
+<body>
+    <%- include ('../partials/header.ejs') %>
+    <!-- Sección principal -->
+    <section class="registro-login">
+        <div class="facebook"> 
+            <a href="#"><i class="fab fa-facebook-square"> </i> <span class="registrate-con-facebook"> Registrate con Facebook </span></a>
+        </div>
+        <div class="division">
+            <div class="linea"> </div>
+            <div class="o"> o </div>
+            <div class="linea"> </div>
+        </div>
+        <div class="registrate-con-email"> Registrate con tu dirección de email </div>
+        <form class="form" action="/" method="GET">
+            <div class="datos">
+                <input type="text" name="nombreYApellido" placeholder="Nombre y apellido">    
+            </div>
+            <div class="datos">
+                <input type="email" name="email" placeholder="Email">    
+            </div>
+            <div class="datos">
+                <input type="password" name="contraseña" placeholder="Escriba su contraseña">    
+            </div>
+            <div class="datos">
+                <input type="password" name="confirmeSuContraseña" placeholder="Confirme su contraseña">    
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" checked> Quiero recibir promociones </label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox"> Acepto los <a href="#"> Términos y Condiciones </a> de Drinking Time, de su <a href="#"> Programa VIP </a> y su <a href="#"> Política de Privacidad </a> 
+            </div>
+            <div class="datos">
+                <button class="boton-rl" type="submit"> Registrarme </button>
+            </div>
+            <div class="datos"> 
+                ¿Ya sos cliente? <a href="/users/login"> Iniciar sesión </a> 
+            </div>
+        </form>
+    </section>
+    <%- include ('../partials/footer.ejs') %>    
+</body>
+</html>
