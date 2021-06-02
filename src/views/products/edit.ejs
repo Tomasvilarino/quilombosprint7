@@ -7,28 +7,30 @@
     <!-- Sección principal -->
     <section class="registro-login">
         <div class="carga-un-nuevo-producto"> Editá el producto </div>
-        <form class="form" action="/" method="GET">
+        <form class="form" action="/products/<%= products.id %>?_method=PUT" method="POST">
             <!-- Nombre del Producto -->
             <div class="datos">
-                <input type="text" name="nombreDelProducto" placeholder="Nombre del Producto">    
+                <input type="text" name="nombre" placeholder="Nombre del Producto" value="<%= products.nombre %>">    
             </div>
             <!-- Descripción del Producto -->
             <div class="categoria-create-edit"> Descripción del Producto: </div>
             <div class="datos" >
-                <textarea class="descripcion-del-producto-create-edit" name="descripcionDelProducto"> </textarea>    
+                <textarea class="descripcion-del-producto-create-edit" name="descripcion"> <%= products.descripcion %>  </textarea>    
             </div>
-            <!-- Imágenes --> 
+            <!-- Imágenes -->
+            <!-- Deberían aparecer las imágenes actuales --> 
             <div class="datos">
                 <input type="file" name="imagenesDelProducto" multiple>    
             </div>              
-            <!-- Categoría --> 
+            <!-- Categoría -->
+            <!-- Debería estar seleccionada (checked) la categoría actual --> 
             <div>
                 <div class="categoria-create-edit"> Categoría: </div>
                 <div class="create-edit-checkbox">
-                <label> <input type="radio" name="categoria" value="Vinos"> Vinos </label>
+                <label> <input type="radio" name="categoria" value="Vinos" <%= products.categoria == "Vinos" ? "checked" : "" %>> Vinos </label>
                 </div>
                 <div class="create-edit-checkbox">
-                <label> <input type="radio" name="categoria" value="Espirituosas"> Espirituosas </label>
+                <label> <input type="radio" name="categoria" value="Espirituosas" <%= products.categoria == "Espirituosas" ? "checked" : "" %>> Espirituosas </label>
                 </div>
                 <div class="create-edit-checkbox">
                 <label> <input type="radio" name="categoria" value="Cervezas"> Cervezas </label>
@@ -39,11 +41,11 @@
             </div>
             <!-- Precio --> 
             <div class="datos">
-                <input type="text" name="precio" placeholder="Precio (Ej: $ 799,99)" value="">    
+                <input type="text" name="precio" placeholder="Precio (Ej: $ 799,99)" value="<%= products.precio %>">    
             </div>
             <!-- Stock -->
             <div class="datos">
-                <input type="text" name="stock" placeholder="Stock (Ej: 100 unidades)" value="">    
+                <input type="text" name="stock" placeholder="Stock (Ej: 100)" value="<%= products.stock %>">    
             </div>
             <!-- Enviar -->
             <div class="datos">
