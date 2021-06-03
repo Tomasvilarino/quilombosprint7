@@ -1162,15 +1162,17 @@ nav{
 /* Formularios Create y Edit */
 
 .carga-un-nuevo-producto {
-font-size: 20px;
+font-size: 35px;
 text-align: center;
 margin: 20px;
+color: #424874;
 }
 
 .categoria-create-edit {
 width: 300px;
 font-size: 19px;
 margin: auto;
+margin-bottom: 8px;
 }
 
 .descripcion-del-producto-create-edit {
@@ -1186,6 +1188,13 @@ font-size: 19px;
 padding-top: 10px;
 }
 
+.datos-imagen{
+  width: auto;
+  text-align: center;
+  margin-bottom: 8px;
+
+}
+
 .create-edit-licores {
 width: 300px;
 margin:auto;
@@ -1196,8 +1205,30 @@ padding-bottom: 20px;
 
 .boton-create-edit {
 position: relative;
-color:lightslategray;
 font-size: 18px;
 cursor: pointer;
 width: 120px;
+background-color: white;
+border-radius: 5px;
+}
+
+.boton-create-edit:hover{
+background-color: #424874;
+color: white;
+transition-duration: 0.4s;
+}
+
+.boton-create-reset {
+position: relative;
+font-size: 18px;
+cursor: pointer;
+width: 120px;
+background-color: white;
+border-radius: 5px;
+}
+
+.boton-create-reset:hover{
+  background-color: red;
+  color: black;
+  transition-duration: 0.4s;
 }
