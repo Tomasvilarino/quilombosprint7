@@ -5,30 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Listado de Productos </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
-    <h1> Listado de Productos </h1>
-        <ul>
-            <% for (let i = 0; i < products.length; i++) { %>
-                <li>
-                    <a href="/products/<%=products[i].id%>"> <%= products[i].nombre %> </a>
-                    <form action="/products/<%=products[i].id%>?_method=DELETE" method="POST">
-                    <button type="submit"> Eliminar Producto </button>
-                    </form>
-                </li>
-            <% } %>    
-        </ul>
-
-    <h2> Buscar por id </h2>
-        <form action="/products/buscarPorId" method="GET">
-            <input type="text" name="id" placeholder="Ej: 0, 1, 2, etc.">
-            <input type="submit" value="Buscar">
-        </form>
-
-    <h2> Buscar por Categoría </h2>
-        <form action="/products/buscarPorCategoria" method="GET">
-            <input type="text" name="categoria" placeholder="Ej: Vinos, Cervezas, Espirituosas, etc.">
-            <input type="submit" value="Buscar">
-        </form>
-</body>
-</html>
+         <%- include ('../partials/header.ejs') %> 
+         <body>
+            <h1 class="titulosList"> Listado de Productos </h1>
+                <ul >
+                    <% for (let i = 0; i < products.length; i++) { %>
+                        <li class="list">
+                            <a class="nombre-producto" href="/products/<%=products[i].id%>" > <%= products[i].nombre %> </a>
+                            <form action="/products/<%=products[i].id%>?_method=DELETE" method="POST">
+                            <button type="submit" class="botonDelete"> Eliminar producto </button>
+                            </form>
+                        </li>
+                    <% } %>
+                </ul>
+            </form>
+        
+            <form action="/products" class="form" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+                   <label >Creacion de nuevo producto</label>
+                    <div class="btn-submit">
+                        <button type="submit" class="boton-crear">Crear nuevo producto</button>
+                    </div>
+                </div>
+            </form>
+        
+            <h2 class="titulosList"> Buscar por id </h2>
+                <form action="/products/buscarPorId" method="GET" class="busquedaList">
+                    <input type="text" name="id" placeholder="Ej: 0, 1, 2, etc." >
+                    <input type="submit" value="Buscar" class="buscar-producto">
+                </form>
+        
+            <h2 class="titulosList"> Buscar por Categoría </h2>
+                <form action="/products/buscarPorCategoria" method="GET" class="busquedaList">
+                    <input type="text" name="categoria" placeholder="Ej: Vinos, Cervezas, Espirituosas, etc.">
+                    <input type="submit" value="Buscar" class="buscar-producto">
+                </form>
+                <%- include ('../partials/footer.ejs') %> 
+            </body>
+        </html>
