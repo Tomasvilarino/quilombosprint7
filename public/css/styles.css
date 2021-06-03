@@ -691,7 +691,7 @@ padding: 10px;
 color: #424874;
 font-weight: bold;
 border: none;
-transition-duration: 0.5s;
+
 width: 47%;
 font-family: 'Roboto', sans-serif;
 font-style: oblique;
@@ -701,6 +701,7 @@ font-size: 20px;
 .botones:hover{
   background-color: #424874;
   color: #fff;
+  transition-duration: 0.5s;
 }
 .descripcion-producto {
   border-bottom: 1px solid #b4b3b7;
