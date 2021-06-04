@@ -6,9 +6,10 @@
     <%- include('../partials/header') %>
     <!-- Sección principal -->
     <section class="registro-login">
-        <div class="carga-un-nuevo-producto"> Editá el producto </div>
+        <div class="carga-un-nuevo-producto"> <h3 class="carga-un-nuevo-producto" >Editá tu producto </h3> </div>
         <form class="form" action="/products/<%= products.id %>?_method=PUT" method="POST">
             <!-- Nombre del Producto -->
+            <div class="categoria-create-edit" > Nombre del producto: </div>
             <div class="datos">
                 <input type="text" name="nombre" placeholder="Nombre del Producto" value="<%= products.nombre %>">    
             </div>
@@ -19,7 +20,7 @@
             </div>
             <!-- Imágenes -->
             <!-- Deberían aparecer las imágenes actuales --> 
-            <div class="datos">
+            <div class="datos-imagen">
                 <input type="file" name="imagenesDelProducto" multiple>    
             </div>              
             <!-- Categoría -->
@@ -52,7 +53,7 @@
                 <button class="boton-create-edit" type="submit"> Enviar </button>
             </div>
             <div class="datos">
-                <button class="boton-create-edit" type="reset"> Borrar </button>
+                <button class="boton-create-reset" type="reset"> Borrar </button>
             </div>
         </form>
     </section>
