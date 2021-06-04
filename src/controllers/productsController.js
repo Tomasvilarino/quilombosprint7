@@ -71,6 +71,9 @@ res.redirect ('/products')
 list: (req, res) => {
 res.render (path.join (__dirname, '../views/products/list.ejs'), {products: products})
 },
+productos: (req, res) => {
+    res.render (path.join (__dirname, '../views/products/products.ejs'), {products: products})
+    },
 
 detalle: (req, res) => {
 let productsJSON = fs.readFileSync (path.join (__dirname, '../database/products.json'), {encoding: 'utf-8'})

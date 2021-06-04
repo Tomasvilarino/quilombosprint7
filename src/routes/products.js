@@ -32,6 +32,8 @@ router.get ('/buscarPorCategoria', productsController.buscarPorCategoria)
 
 router.get ('/', productsController.list)
 
+router.get ('/productos', productsController.productos)
+
 router.get ('/create', productsController.create)
 
 router.get ('/:id', productsController.detalle)
