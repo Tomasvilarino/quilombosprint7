@@ -1,10 +1,70 @@
-[{"id":1,"nombreYApellido":"Ronica Marzelo","email":"rmarzelo0@google.de","contraseña":"z3ztnZzWV"},
-{"id":2,"nombreYApellido":"Shantee Andriulis","email":"sandriulis1@thetimes.co.uk","contraseña":"v40IQfmn"},
-{"id":3,"nombreYApellido":"Amargo Wybron","email":"awybron2@go.com","contraseña":"YuA0BcSDm"},
-{"id":4,"nombreYApellido":"Dun Surcomb","email":"dsurcomb3@spotify.com","contraseña":"mdL16d"},
-{"id":5,"nombreYApellido":"Tim Roswarne","email":"troswarne4@yahoo.co.jp","contraseña":"epro1kFtUO1"},
-{"id":6,"nombreYApellido":"Calvin Mantrup","email":"cmantrup5@icq.com","contraseña":"sSG4yx"},
-{"id":7,"nombreYApellido":"Morna Hallibone","email":"mhallibone6@ocn.ne.jp","contraseña":"DxMWC7brGvf"},
-{"id":8,"nombreYApellido":"Myranda Gosnold","email":"mgosnold7@rakuten.co.jp","contraseña":"VUmGFzDXRc"},
-{"id":9,"nombreYApellido":"Pansie Bullivent","email":"pbullivent8@purevolume.com","contraseña":"PW9c67"},
-{"id":10,"nombreYApellido":"Chadd Tickner","email":"ctickner9@hhs.gov","contraseña":"YEltH2"}]
+[
+ {
+  "id": 1,
+  "nombreYApellido": "Ronica Marzelo",
+  "email": "rmarzelo0@google.de",
+  "contraseña": "z3ztnZzWV"
+ },
+ {
+  "id": 2,
+  "nombreYApellido": "Shantee Andriulis",
+  "email": "sandriulis1@thetimes.co.uk",
+  "contraseña": "v40IQfmn"
+ },
+ {
+  "id": 3,
+  "nombreYApellido": "Amargo Wybron",
+  "email": "awybron2@go.com",
+  "contraseña": "YuA0BcSDm"
+ },
+ {
+  "id": 4,
+  "nombreYApellido": "Dun Surcomb",
+  "email": "dsurcomb3@spotify.com",
+  "contraseña": "mdL16d"
+ },
+ {
+  "id": 5,
+  "nombreYApellido": "Tim Roswarne",
+  "email": "troswarne4@yahoo.co.jp",
+  "contraseña": "epro1kFtUO1"
+ },
+ {
+  "id": 6,
+  "nombreYApellido": "Calvin Mantrup",
+  "email": "cmantrup5@icq.com",
+  "contraseña": "sSG4yx"
+ },
+ {
+  "id": 7,
+  "nombreYApellido": "Morna Hallibone",
+  "email": "mhallibone6@ocn.ne.jp",
+  "contraseña": "DxMWC7brGvf"
+ },
+ {
+  "id": 8,
+  "nombreYApellido": "Myranda Gosnold",
+  "email": "mgosnold7@rakuten.co.jp",
+  "contraseña": "VUmGFzDXRc"
+ },
+ {
+  "id": 9,
+  "nombreYApellido": "Pansie Bullivent",
+  "email": "pbullivent8@purevolume.com",
+  "contraseña": "PW9c67"
+ },
+ {
+  "id": 10,
+  "nombreYApellido": "Chadd Tickner",
+  "email": "ctickner9@hhs.gov",
+  "contraseña": "YEltH2"
+ },
+ {
+  "id": 11,
+  "nombreYApellido": "Eugenia Molina",
+  "email": "marumolina@hotmail.com",
+  "contraseña": "$2a$10$T2xQKQBnJJnp9bSR1ndtau0FoA8JedUPGIl6hnu3u1EGSq40kewbW",
+  "confirmeSuContraseña": "Lila15"
+ }
+
+]

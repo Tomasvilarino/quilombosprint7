@@ -3,6 +3,14 @@
 <%- include ('../partials/head.ejs') %>
 <body>
     <%- include ('../partials/header.ejs') %>
+    <% if (typeof errors != 'undefined') { %> 
+        <ul>
+            <% for (const oneError in errors) { %>
+                <li class="text-danger"><%= errors[oneError].msg %></li>
+            <% } %>
+        </ul>
+    <% } %>
+    
     <!-- Sección principal -->
     <section class="registro-login">
         <div class="facebook"> 
@@ -14,7 +22,7 @@
             <div class="linea"> </div>
         </div>
         <div class="registrate-con-email"> Registrate con tu dirección de email </div>
-        <form class="form" action="/" method="GET">
+        <form class="form" action="/users/register" method="POST">
             <div class="datos">
                 <input type="text" name="nombreYApellido" placeholder="Nombre y apellido">    
             </div>
