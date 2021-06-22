@@ -137,7 +137,6 @@ body{
   border: none;
   color: white;
   opacity: 0.6;
-  
   text-decoration: none;
   cursor: pointer;
   padding: 0px 10px 0px 10px;
@@ -566,6 +565,32 @@ main section article img{
 
   }
 }
+
+/*Perfil de usuario*/
+.container15{
+  min-height: calc(100vh - 190px);
+  }
+.col-md-3{
+  justify-content: space-between;
+  margin-left: 20px;
+}
+#iconos2{
+  text-decoration: none;
+  background-color: #424874;
+  font-size: 20px;
+  border: none;
+  color: white;
+  opacity: 0.6;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 15px 10px 15px 10px;
+}
+
+#iconos2:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+
 /* Register - Login */
 
 .registro-login .facebook {
@@ -977,11 +1002,14 @@ object-fit: cover;
 
 /***************footer**********************/
 
+
+
 footer {
 background-color: #424874;
 display: flex;
 justify-content: space-between;
 font-size: 12px;
+margin-bottom: 0;
 }
 
 footer .titulos {

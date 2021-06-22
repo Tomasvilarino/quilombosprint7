@@ -28,12 +28,10 @@
                 <a href="/Extras">Extras</a>
             </div>
         </div>
-        
-        
         <% if (locals.isLogged){ %>
-             <p>Hola, amig@ <%= locals.userLogged.nombreYApellido%></p>   
+            
             <a href="/users/perfilDeusuario"><button id="iconos">Mi perfil</button></a>
-            <a href="/users/logout"><button id="iconos">Logout</button></a>
+            <a href="/users/logout"><button id="iconos" class="fas fa-users-slash"></button></a>
             <a href="/users/carrito"><button id="iconos" class="fas fa-store" alt="carrito"></button></a>
             <a href=#buscar><button id="iconos" class="fas fa-search"></button></a>
        <% } else {  %>
