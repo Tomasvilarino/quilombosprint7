@@ -192,6 +192,31 @@ body{
   .slider ul{
     display: none;
   }
+
+  main section article img{
+    width: 100%;
+    height: 40vh;
+  }
+
+  main section div.products article{
+    width: 65%;
+    margin-left: 20%;
+
+}
+
+ #iconos{
+   font-size: 15px;
+ }
+ 
+ #envios h3{
+   font-size: 15px;
+ }
+
+ 
+ div .botonE{
+   font-size: 15px;
+ }
+
 }
 
 
@@ -441,7 +466,7 @@ main section div.products article{
 }
 main section article img{
   width: 100%;
-  height: 60vh;
+  height: 50vh;
 }
 .slider ul{
   display: none;
@@ -786,18 +811,19 @@ margin-left: 2%;
 }
 .productosE{
   text-align: left;
-  margin-left: 50px;
+  margin-left: 10%;
   color: #424874;
   font-size: 30px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .prices{
-  font-size: 15px;
+  font-size: small;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
-  margin-left: 150px;
+  margin-left: 5%;
   color: #424874;
   font-style: italic;
+  padding: 0px;
 }
 .image-note{
   border-radius: 5px;
