@@ -53,7 +53,7 @@ list: (req, res) => {
 res.render ("users/list", {users: users})
 },
 
-
+//Proceso de Register
 
 processRegister : (req, res) =>{
 const resultValidation = validationResult(req);

@@ -89,7 +89,7 @@ body{
   width: 30vw;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
   border-radius: 2px;
-  top: 15vh;
+  top: 10vh;
   z-index: 2;
 }
 /* MENU BURGER MENU LETRAS*/
@@ -193,6 +193,11 @@ body{
     display: none;
   }
 
+  .burger-menu {
+    margin-left: 20%;
+    
+  }
+
   main section article img{
     width: 100%;
     height: 40vh;
@@ -243,10 +248,6 @@ body{
   margin-top: 0;
 }
 
-.slider2 li{
-  width: 100%;
-  list-style: none;
-}
 
 .slider2 img{
   width: 100%;
@@ -301,7 +302,8 @@ div.last-visit,
 div.offers{
   display: flex;
   flex-wrap: wrap;
-  border: grey solid 15px;
+  border: grey solid 10px;
+  top: 1px;
 }
 
 img{
@@ -347,7 +349,7 @@ main{
 main section article{
   background-color: #fff;    
   margin: 10px 0px;
- 
+  
 }
 
 
@@ -405,7 +407,7 @@ article div.articulos{
   align-items: baseline;
   border-top: 1px solid #ebebeb;
   position: relative;
-  padding: 15px;
+  padding: 10px;
 }
 
 .otras-opciones{
@@ -442,10 +444,17 @@ float: left;
   .topnav-burger {
       width: 30vw;
       top: 18vh;
+      padding-left: 1px;
       z-index: 2;
+      
   }
   
-  .topnav-burger a {
+
+  .burger-menu {
+    margin-left: 5vw;
+    }
+  
+    .topnav-burger a {
       font-size: 2vw;
   }
   
@@ -472,7 +481,7 @@ main section article img{
   display: none;
 }
 .slider2 img{
-  width: 150vw;
+  width: 100vw;
 }
 
 }
@@ -493,8 +502,9 @@ main section article img{
 
 .burger-menu{
     display: flex;
+    margin-left: 1vw;
 }
-  
+
   main section div.products article{
     width: 30%;
     height: 30%;
@@ -525,8 +535,7 @@ main section article img{
     }
   
   .slider2 img{
-    width: 250vw;
-    height: 620px;
+    width: 100vw;
     object-fit: cover;
     }
 
