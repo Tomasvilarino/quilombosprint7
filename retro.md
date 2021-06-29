@@ -41,5 +41,19 @@
 - Mantener la buena comunicacion y la organizacion.
 - Seguir ayudandonos y trabanjando como equipo.
 
+# Retrospectiva Sprint 4:
+
+## Que estamos haciendo bien:
+
+- Estamos conformes con el trabajo hecho.
+
+## Que estamos haciendo mal:
+
+- Las responsabilidades no fueron repartidas de la mejor manera
+
+# Que tenemos que seguir haciendo:
+
+- Mantener la buena comunicacion.
+
 
 
