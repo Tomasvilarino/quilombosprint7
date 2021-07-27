@@ -188,7 +188,87 @@ body{
   70% {margin-left: -200%;}
 }
 
+/* products*/
+
+.botellas{
+  margin: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+  }
+  .botellas > article{
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3) ;
+  border-radius: 20px;
+  text-align: center;
+  width: 250px;
+  transition: transform .3s
+  }
+  
+  .botellas > article:hover{
+    transform: translateY(5px);
+    box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
+  }
+  
+  .botellas > article img{
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  }
+  
+  
+  
+  .boton-comprar-products{
+    text-align: center;
+    color: black;
+    margin-bottom: 18%;
+  
+  }
+  
+  .listadoDeProductos a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 100px;
+  }
+  .productosE{
+    text-align: center;
+    color: #424874;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .prices{
+    font-size: 0.87em;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin-left: 5%;
+    color: #424874;
+    line-height: normal;
+  }
+  
+  .boton-comprar-products{
+    background-color: #424874;
+    border-radius: 20px;
+    border: none;
+    color: #A6B1E1;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
 @media (max-width: 550px){
+  .botellas{
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+
+  .botellas > .listadoDeProductos{
+    text-align: center;
+  }
+
   .slider ul{
     display: none;
   }
@@ -225,6 +305,8 @@ body{
 .boton-comprar-products{
 width: 100%;
 }
+
+
 
 
 }
@@ -480,18 +562,27 @@ float: left;
 }
 
 
+  
 
 @media (min-width: 550px){
   main section div.products article{
     width: 30%;
     height: 30%;
+  } 
 
-} 
+  .botellas{
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+
+  .botellas > .listadoDeProductos{
+    text-align: center;
+  }
   .topnav-burger {
-      width: 30vw;
-      top: 18vh;
-      padding-left: 1px;
-      z-index: 2;
+    width: 30vw;
+    top: 18vh;
+    padding-left: 1px;
+    z-index: 2;
       
   }
   
@@ -500,8 +591,8 @@ float: left;
     margin-left: 5vw;
     }
   
-    .topnav-burger a {
-      font-size: 2vw;
+  .topnav-burger a {
+    font-size: 2vw;
   }
   
   main section div.products{
@@ -544,9 +635,20 @@ section article button{
 width: 100%;
 }
 
+
+
+
 }
 
 @media screen and (min-width: 769px) {
+  .botellas{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .botellas > .listadoDeProductos{
+    text-align: center;
+  }
+  
   .menu-principal{
     display: none;
 }
@@ -647,7 +749,9 @@ width: 100%;
   .menu-principal{
       display: flex;
   }
-
+  .botellas{
+    grid-template-columns: repeat(3, 1fr);
+  }
   .burger-menu {
       display: none;
   }
@@ -962,62 +1066,6 @@ margin-left: 2%;
 .boton1{
 margin-left: 2%;
 }
-/* products*/
-
-.botellas{
-  display: flex;
-    flex-wrap: wrap;
-    justify-content: center
-}
-.listadoDeProductos{
-  position: relative;
-    width: 20%;
-    height: 25em;
-    align-self: center;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 5%;
-    margin: 5px;
-    border-style: solid;
-    border-width: 2px;
-    border-color:grey;
-}
-
-
-.boton-comprar-products{
-  text-align: center;
-  color: black;
-  margin-bottom: 18%;
-
-}
-
-.listadoDeProductos a{
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin: 0 auto;
-  margin-top: 50px;
-  max-width: 100px;
-}
-.productosE{
-  text-align: center;
-  color: #424874;
-  font-size: 30px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.prices{
-  font-size: 0.87em;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: bold;
-  margin-left: 5%;
-  color: #424874;
-  line-height: normal;
-}
-
-
 
 
 /*carrito*/

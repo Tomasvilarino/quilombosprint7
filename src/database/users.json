@@ -58,5 +58,12 @@
   "nombreYApellido": "Chadd Tickner",
   "email": "ctickner9@hhs.gov",
   "contraseña": "YEltH2"
+ },
+ {
+  "id": 11,
+  "nombreYApellido": "Eugenia Molina",
+  "email": "mariaeugenm@icloud.com",
+  "contraseña": "$2a$10$.JUaAmTFnIKLuKNkz/iyHOCqTCpWWvLbDgeaM06uaNoLoDAkg8OjW",
+  "avatar": "/avatar1627403816154.jpg"
  }
 ]
