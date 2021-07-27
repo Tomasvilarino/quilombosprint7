@@ -22,7 +22,7 @@
             <div class="linea"> </div>
         </div>
         <div class="registrate-con-email"> Registrate con tu dirección de email </div>
-        <form class="form" action="/users/register" method="POST">
+        <form class="form" action="/users/register" method="POST" enctype="multipart/form-data">
             <div class="datos">
                 <input type="text" name="nombreYApellido" placeholder="Nombre y apellido">    
             </div>
@@ -32,6 +32,11 @@
             <div class="datos">
                 <input type="password" name="contraseña" placeholder="Escriba su contraseña">    
             </div>
+            <div class="datos">
+                    <label>Imagen de perfil:</label>
+                    <img src="" alt="" id="imgPreview">
+                        <input type="file" name="avatar">
+                        </div>
            <!-- <div class="datos">
                 <input type="password" name="confirmeSuContraseña" placeholder="Confirme su contraseña">    
             </div> -->

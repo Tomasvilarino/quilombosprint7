@@ -58,19 +58,5 @@
   "nombreYApellido": "Chadd Tickner",
   "email": "ctickner9@hhs.gov",
   "contraseña": "YEltH2"
- },
- {
-  "id": 11,
-  "nombreYApellido": "Eugenia Molina",
-  "email": "marumolina@hotmail.com",
-  "contraseña": "$2a$10$T2xQKQBnJJnp9bSR1ndtau0FoA8JedUPGIl6hnu3u1EGSq40kewbW",
-  "confirmeSuContraseña": "Lila15"
- },
- {
-  "id": 12,
-  "nombreYApellido": "Eugenia Molina",
-  "email": "mariaeugenm@icloud.com",
-  "contraseña": "$2a$10$xHeSvEvY914goYBfbOfvSeQv0EOQTEuaFzCz7QC2ukoboTNN/kFtu",
-  "confirmeSuContraseña": "Lila15"
  }
 ]

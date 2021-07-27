@@ -1,6 +1,6 @@
 const User = require ("../models/Users")
 
-function usuarioLogueado(req,res,next){
+function userLogged(req,res,next){
     res.locals.isLogged = false
 
     let emailInCookie = req.cookies.userEmail;
@@ -20,4 +20,4 @@ function usuarioLogueado(req,res,next){
     next ()
 }
 
-module.exports = usuarioLogueado
+module.exports = userLogged

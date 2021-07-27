@@ -6,21 +6,24 @@
 	<%- include('../partials/header', { pageTitle: 'Perfil de ' + user.nombreYApellido }); %>
 	
 	<!-- Container -->
+	
 	<div class="container15" style="margin-top: 40px;">
 		<div class="row">
 			<div class="col-md-3">
-				<h2>Bienvenid@, <%= user.nombreYApellido %> </h2>
-			
-			   <div><a href="/users/perfilDeusuario"><button id="iconos2">Mis Compras</button></a> </div>
-				<div><a href="/users/perfilDeusuario"><button id="iconos2">Mis Direcciones</button></a> </div>
-				<div><a href="/users/perfilDeusuario"><button id="iconos2">Mis Datos Personales</button></a> </div>
-				<div><a href="/users/perfilDeusuario"><button id="iconos2">Vales de descuento</button></a> </div>
-
-				
-				<div class="alert alert-success"><%= user.email %></div>
+				<h1 class="bienvenidoPerfil">Bienvenid@, <%= user.nombreYApellido %> </h1>
+				<article class="imagenDePerfil">
+					<img src="../../images/avatar/<%= userLogged.avatar%>">
+				</article>
+				<article class="btnPerfil">
+			   <div class="pricess"><a href="/users/perfilDeusuario"><button id="iconos2">Mis Compras</button></a> </div>
+				<div class="pricess"><a href="/users/perfilDeusuario"><button id="iconos2">Mis Direcciones</button></a> </div>
+				<div class="pricess"><a href="/users/perfilDeusuario"><button id="iconos2">Mis Datos Personales</button></a> </div>
+				<div class="pricess"><a href="/users/perfilDeusuario"><button id="iconos2">Vales de descuento</button></a> </div>
+			</article>
 			</div>
 		</div>
 	</div>
+
 	<!-- //Container -->
 	
 	<%- include('../partials/footer'); %>

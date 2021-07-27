@@ -80,6 +80,7 @@ if (resultValidation.errors.length >0){
     let userToCreate = {
         ...req.body,
         contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
+        avatar: req.file != undefined ? req.file.filename : null,
     }
 
     let usureCreated = User.create(userToCreate);
@@ -116,7 +117,7 @@ if (resultValidation.errors.length >0){
        });
     },
     profile: (req, res) => {
-        console.log(req.cookies.userEmail)
+        let user =  req.session.userLogged
 		res.render('users/perfilDeusuario', { 
             user: req.session.userLogged
          }); 

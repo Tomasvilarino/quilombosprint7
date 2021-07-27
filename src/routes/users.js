@@ -1,8 +1,13 @@
-const express = require ('express')
+const express = require ('express');
 const {check, body} = require("express-validator");
 const router = express.Router();
-const guestMiddleware = require("../middlewares/guestMiddleware")
-const authMiddleware = require("../middlewares/authMiddleware")
+const guestMiddleware = require("../middlewares/guestMiddleware");
+const authMiddleware = require("../middlewares/authMiddleware");
+const upload =  require("../middlewares/multerMiddleware");
+const registerValidation =  require("../middlewares/validateRegisterMiddleware")
+const usuario =  require("../middlewares/usuarioLogeado")
+const loginValidation = require("../middlewares/validateLoginMiddleware")
+
 
 
 const path = require ('path')
@@ -13,9 +18,9 @@ router.get ('/carrito', usersController.carrito)
 
 router.get ('/register',guestMiddleware,usersController.register)
 
-router.get ('/login',guestMiddleware,usersController.login)
+router.get ('/login',guestMiddleware, loginValidation,usersController.login)
 
-router.post("/login", usersController.loginProcess)
+router.post("/login", loginValidation,usersController.loginProcess)
 
 router.get("/perfilDeusuario",authMiddleware,usersController.profile)
 
@@ -25,10 +30,7 @@ router.get ('/list', usersController.list)
 
 router.get ('/buscarPorNombreYApellido', usersController.buscarPorNombreYApellido)
 
-router.post("/register", [
-    check("email").isEmail().withMessage("Email invalido"),
-    check("contraseña").isLength({min : 4}).withMessage("La constraseña debe tener al menos 8 caracteres")
-],usersController.processRegister);
+router.post("/register",upload.single("avatar"),registerValidation,usersController.processRegister);
 
 
 
