@@ -10,16 +10,8 @@
     <h1> Listado de Usuarios </h1>
         <ul>
             <% for (let i = 0; i < users.length; i++) { %>
-                <li>
-                    <a href="/users/detail/<%=users[i].id%>"> <%= users[i].nombreYApellido %> </a>
-                </li>
+                <li> <%= users[i].nombre_y_apellido %> </li>
             <% } %>    
         </ul>
-
-    <h2> Buscar por Nombre y Apellido </h2>
-        <form action="/users/buscarPorNombreYApellido" method="GET">
-            <input type="text" name="nombreYApellido" placeholder="Ej: Juan Pérez">
-            <input type="submit" value="Buscar">
-        </form>
 </body>
 </html>

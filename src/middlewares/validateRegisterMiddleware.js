@@ -4,8 +4,8 @@ const { body } = require ("express-validator");
 
 module.exports = [
     
-    body ("nombreYApellido").notEmpty().withMessage("Tenes que escribir tu nombre y apellido"),
-    body ("nombreYApellido").isLength({ min: 5}).withMessage("El nombre debe tener al menos 5 caracteres"),
+    body ("nombre_y_apellido").notEmpty().withMessage("Tenes que escribir tu nombre y apellido"),
+    body ("nombre_y_apellido").isLength({ min: 5}).withMessage("El nombre debe tener al menos 5 caracteres"),
     body ("email").notEmpty().withMessage("Tenes que escribir tu email").bail().isEmail().withMessage("Formato no valido para correo electronico"),
     body ("contraseña").notEmpty().withMessage("Tenes que escribir una constraseña con al menos 8 caracteres").bail() .isLength({ min: 8}).withMessage('La contraseña debe tener mas de 8 caracteres'),
     body('imagePerfil').custom((value, { req }) => {

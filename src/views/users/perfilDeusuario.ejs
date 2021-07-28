@@ -3,14 +3,14 @@
 
 <%- include('../partials/head'); %>
 <body>
-	<%- include('../partials/header', { pageTitle: 'Perfil de ' + user.nombreYApellido }); %>
+	<%- include('../partials/header', { pageTitle: 'Perfil de ' + user.nombre_y_apellido }); %>
 	
 	<!-- Container -->
 	
 	<div class="container15" style="margin-top: 40px;">
 		<div class="row">
 			<div class="col-md-3">
-				<h1 class="bienvenidoPerfil">Bienvenid@, <%= user.nombreYApellido %> </h1>
+				<h1 class="bienvenidoPerfil">Bienvenid@, <%= user.nombre_y_apellido %> </h1>
 				<article class="imagenDePerfil">
 					<img src="../../images/avatar/<%= userLogged.avatar%>">
 				</article>

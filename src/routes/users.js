@@ -12,7 +12,11 @@ const loginValidation = require("../middlewares/validateLoginMiddleware")
 
 const path = require ('path')
 
+// Requerimiento del controlador 
+
 let usersController = require ('../controllers/usersController')
+
+// Rutas
 
 router.get ('/carrito', usersController.carrito)
 
@@ -28,10 +32,8 @@ router.get("/logout", usersController.logout)
 
 router.get ('/list', usersController.list)
 
-router.get ('/buscarPorNombreYApellido', usersController.buscarPorNombreYApellido)
+
 
 router.post("/register",upload.single("avatar"),registerValidation,usersController.processRegister);
-
-
 
 module.exports = router

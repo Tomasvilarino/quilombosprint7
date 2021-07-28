@@ -55,5 +55,21 @@
 
 - Mantener la buena comunicacion.
 
+# Retrospectiva Sprint 5:
+
+# Que estamos haciendo bien:
+
+- Hubo facilidad para organizarnos y repartir las responsabilidades.
+- Estamos conformes con el trabajo realizado.
+
+# Que estamos haciendo mal:
+
+- Las responsabilidades no fueron repartidas de la mejor manera
+- No nos juntamos a discutir el Sprint hasta bastante tarde.
+
+# Que tenemos que seguir haciendo:
+
+- Mantener la comunicacion y el trabajo en equipo.
+
 
 
