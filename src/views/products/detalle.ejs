@@ -10,7 +10,7 @@
 
                 <figure>
                     <div class='img-principal'>
-                        <img src="../images/<%=products.imagenes ? products.imagenes : 'productDefault.jpg' %>" alt="imagen principal">
+                        <img src="../images/<%=product.imagen ? product.imagen : 'productDefault.jpg' %>" alt="imagen principal">
                     </div>
 
                     <div class='img-secundarias'>
@@ -22,23 +22,27 @@
             </figure>
 
             <div class='info-producto-principal'>
-                <p> <%= products.nombre %> </p>
-                <p> <%= products.precio %> </p>
+                <p> <%= product.nombre %> </p>
+                <p> <%= product.precio %> </p>
 
                 <article class='descripcion'>
-                    <p> <%= products.descripcion %> </p>
+                    <p> <%= product.descripcion %> </p>
                 </article>
 
-            <div class='compras'>
-                <span class="añadir-carrito">  
-                <button type="submit" class="botones">Añadir al carrito</button>
-                </span> 
-                <span class="compra">
-                <button type="submit" class="botones">Comprar</button>
-                </span>
-            </div>
+                <div class='compras'>
+                    <span class="añadir-carrito">  
+                    <button type="submit" class="botones">Añadir al carrito</button>
+                    </span> 
+                    <span class="compra">
+                    <button type="submit" class="botones">Comprar</button>
+                    </span>
+                </div>
+                    <form action="/products/<%=product.id%>/edit" method="GET">
+                        <button type="submit" class="botonDelete"> Editar Producto </button>
+                    </form>
+                <div>
 
-
+                </div>
             </div>       
 
         </section>

@@ -2,7 +2,8 @@ const path = require ('path');
 const User = require ("../models/Users");
 const {validationResult, body} = require ("express-validator");
 const fs = require("fs")
-const bcryptjs = require('bcryptjs');
+const bcryptjs = require('bcryptjs')
+let db = require ('../database/models')
 
 
 const hasErrorGetMessage = (field, errors) => {
@@ -16,54 +17,37 @@ const hasErrorGetMessage = (field, errors) => {
 	return false;
 };
 
-
-
-let users = [
-{
-id: 0,
-nombreYApellido: "Nombre y Apellido Usuario 0",
-email: "Email Usuario 0",
-contraseña: "Contraseña Usuario 0"
-},
-{
-id: 1,
-nombreYApellido: "Nombre y Apellido Usuario 1",
-email: "Email Usuario 1",
-contraseña: "Contraseña Usuario 1"
-},
-{
-id: 2,
-nombreYApellido: "Nombre y Apellido Usuario 2",
-email: "Email Usuario 2",
-contraseña: "Contraseña Usuario 2"
-}
-]
-
 let usersController = {
+
 carrito: (req, res) => res.render ("users/carrito"),
 
-register:(req, res) => {
-    
+register:(req, res) => {    
     return res.render ("users/register")
 },
 
 login:(req, res) => res.render ("users/login"),
 
 list: (req, res) => {
-res.render ("users/list", {users: users})
+    db.Users.findAll({
+        order: [['nombre_y_apellido', 'ASC']]
+    })
+        .then((users) => {
+            res.render (path.join (__dirname, '../views/users/list.ejs'), {users: users})
+        })
 },
 
 //Proceso de Register
 
-processRegister : (req, res) =>{
-const resultValidation = validationResult(req);
+processRegister: (req, res) => {
 
-if (resultValidation.errors.length >0){
-    return res.render ("users/register", {
-        errors: resultValidation.mapped(),
-        oldData: req.body
-    });
-}
+    const resultValidation = validationResult (req);
+
+    if (resultValidation.errors.length > 0) {
+        return res.render ("users/register", {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+        });
+    }
 
     let userInData = User.findByField("email", req.body.email);
     if(userInData){
@@ -82,8 +66,15 @@ if (resultValidation.errors.length >0){
         contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
     }
 
-    let usureCreated = User.create(userToCreate);
-    return res.redirect("login")
+    User.create(userToCreate)
+
+    db.Users.create({
+        nombre_y_apellido: req.body.nombre_y_apellido,
+        email: req.body.email,
+        contraseña: req.body.contraseña
+    })
+    
+    res.redirect('/users/login')
 },
     loginProcess: (req, res) =>{
        let userToLogin = User.findByField("email", req.body.email)
@@ -127,17 +118,6 @@ if (resultValidation.errors.length >0){
         req.session.destroy();
         return res.redirect("/")
     },
-
-buscarPorNombreYApellido: (req, res) => {
-let usersResult = []
-for (let i = 0; i < users.length; i++) {
-if (users[i].nombreYApellido == req.query.nombreYApellido) {
-usersResult.push (users[i])
-}
-}
-res.render (path.join (__dirname, '../views/users/buscarPorNombreYApellido.ejs'), {usersResult: usersResult})
-},
-
 }
 
 

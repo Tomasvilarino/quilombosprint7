@@ -1,7 +1,5 @@
 const express = require ('express')
-
 const path = require ('path')
-
 const router = express.Router ()
 
 // Multer
@@ -20,11 +18,15 @@ callback (null, imageName)
 )
 let fileUpload = multer({storage: multerDiskStorage})
 
+// Requerimiento del controlador
+
 let productsController = require ('../controllers/productsController')
+
+//Rutas
 
 // Agrego las siguientes dos rutas pertenecientes a buscadores dentro del listado de productos
 
-router.get ('/buscarPorId', productsController.buscarPorId)
+router.get ('/buscarPorNombre', productsController.buscarPorNombre)
 
 router.get ('/buscarPorCategoria', productsController.buscarPorCategoria)
 
@@ -32,13 +34,13 @@ router.get ('/buscarPorCategoria', productsController.buscarPorCategoria)
 
 router.get ('/', productsController.list)
 
-router.get ('/productos', productsController.productos)
+// router.get ('/productos', productsController.productos)
 
 router.get ('/create', productsController.create)
 
 router.get ('/:id', productsController.detalle)
 
-router.post ('/', fileUpload.single ('imagenes'), productsController.store)
+router.post ('/', fileUpload.single ('imagen'), productsController.store)
 
 router.get ('/:id/edit', productsController.edit)
 
