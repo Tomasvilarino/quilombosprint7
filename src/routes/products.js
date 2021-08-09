@@ -1,6 +1,7 @@
 const express = require ('express')
 const path = require ('path')
 const router = express.Router ()
+const validateProduct = require ("../middlewares/validateProductMiddleware")
 
 // Multer
 const multer = require ('multer')
@@ -37,13 +38,13 @@ router.get ('/', productsController.list)
 
 // router.get ('/productos', productsController.productos)
 
-router.get ('/create', productsController.create)
+router.post ('/create', validateProduct, productsController.create)
 
 router.get ('/:id', productsController.detalle)
 
 router.post ('/', fileUpload.single ('imagen'), productsController.store)
 
-router.get ('/:id/edit', productsController.edit)
+router.post ('/:id/edit', validateProduct, productsController.edit)
 
 router.put ('/:id', productsController.update)
 

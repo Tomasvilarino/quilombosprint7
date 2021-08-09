@@ -11,17 +11,26 @@
             <!-- Nombre del Producto -->
             <div class="categoria-create-edit" > Nombre del producto: </div>
             <div class="datos">
-                <input type="text" name="nombre" placeholder="Nombre del Producto" value="<%= product.nombre %>">    
+                <input type="text" name="nombre_producto" placeholder="Nombre del Producto" value="<%= product.nombre %>">
+                <% if (locals.errors && errors.nombre_producto) { %>
+                    <div class="text-danger" > <%= errors.nombre_producto.msg %> </div>
+                <% } %>    
             </div>
             <!-- Descripción del Producto -->
             <div class="categoria-create-edit"> Descripción del Producto: </div>
             <div class="datos" >
-                <textarea class="descripcion-del-producto-create-edit" name="descripcion"> <%= product.descripcion %>  </textarea>    
+                <textarea class="descripcion-del-producto-create-edit" name="descripcion"> <%= product.descripcion %>  </textarea>
+                <% if (locals.errors && errors.descripcion) { %>
+                    <div class="text-danger" > <%= errors.descripcion.msg %> </div>
+                <% } %>      
             </div>
             <!-- Imágenes -->
             <!-- Deberían aparecer las imágenes actuales --> 
             <div class="datos-imagen">
-                <input class="boton-adjuntar" type="file" name="imagen" multiple>    
+                <input class="boton-adjuntar" type="file" name="imagen" multiple>
+                <% if (locals.errors && errors.imagenProducto) { %>
+                    <div class="text-danger" > <%= errors.imagenProducto.msg %> </div>
+                <% } %>    
             </div>            
             <!-- Categoría --> 
             <div>
@@ -34,11 +43,17 @@
             </div>
             <!-- Precio --> 
             <div class="datos" id="precio">
-                <input type="text" name="precio" placeholder="Precio (Ej: $ 799,99)" value="<%= product.precio %>">    
+                <input type="text" name="precio" placeholder="Precio (Ej: $ 799,99)" value="<%= product.precio %>">
+                <% if (locals.errors && errors.precio) { %>
+                    <div class="text-danger" > <%= errors.precio.msg %> </div>
+                <% } %>      
             </div>
             <!-- Stock -->
             <div class="datos">
-                <input type="text" name="stock" placeholder="Stock (Ej: 100)" value="<%= product.stock %>">    
+                <input type="text" name="stock" placeholder="Stock (Ej: 100)" value="<%= product.stock %>">
+                <% if (locals.errors && errors.stock) { %>
+                    <div class="text-danger" > <%= errors.stock.msg %> </div>
+                <% } %>   
             </div>
             <!-- Enviar -->
             <div class="datos">

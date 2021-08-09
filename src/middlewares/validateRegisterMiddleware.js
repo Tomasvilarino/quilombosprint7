@@ -4,11 +4,14 @@ const { body } = require ("express-validator");
 
 module.exports = [
     
-    body ("nombre_y_apellido").notEmpty().withMessage("Tenes que escribir tu nombre y apellido"),
-    body ("nombre_y_apellido").isLength({ min: 5}).withMessage("El nombre debe tener al menos 5 caracteres"),
-    body ("email").notEmpty().withMessage("Tenes que escribir tu email").bail().isEmail().withMessage("Formato no valido para correo electronico"),
-    body ("contraseña").notEmpty().withMessage("Tenes que escribir una constraseña con al menos 8 caracteres").bail() .isLength({ min: 8}).withMessage('La contraseña debe tener mas de 8 caracteres'),
-    body('imagePerfil').custom((value, { req }) => {
+    body ("nombre_y_apellido").notEmpty().withMessage("Tenes que escribir tu nombre y apellido."),
+    body ("nombre_y_apellido").isLength({ min: 5}).withMessage("El nombre debe tener al menos 5 caracteres."),
+    body ("email").notEmpty().withMessage("Tenes que escribir tu email"),
+    body ("email").isEmail().withMessage("Formato no valido para correo electronico"),
+    body ("contraseña").notEmpty().withMessage("Tenes que escribir una constraseña."), 
+    body ("contraseña").isLength({ min: 8}).withMessage('La contraseña debe tener mas de 8 caracteres.'),
+    body ("confirmar").notEmpty().withMessage("Tenes que confirmar tu contaseña."),
+    body ('imagePerfil').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png'];
 

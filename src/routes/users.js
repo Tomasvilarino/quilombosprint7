@@ -32,8 +32,6 @@ router.get("/logout", usersController.logout)
 
 router.get ('/list', usersController.list)
 
-
-
 router.post("/register",upload.single("avatar"),registerValidation,usersController.processRegister);
 
 module.exports = router

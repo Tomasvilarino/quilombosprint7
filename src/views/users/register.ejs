@@ -3,14 +3,6 @@
 <%- include ('../partials/head.ejs') %>
 <body>
     <%- include ('../partials/header.ejs') %>
-    <% if (typeof errors != 'undefined') { %> 
-        <ul>
-            <% for (const oneError in errors) { %>
-                <li class="text-danger"><%= errors[oneError].msg %></li>
-            <% } %>
-        </ul>
-    <% } %>
-    
     <!-- Sección principal -->
     <section class="registro-login">
         <div class="facebook"> 
@@ -24,34 +16,68 @@
         <div class="registrate-con-email"> Registrate con tu dirección de email </div>
         <form class="form" action="/users/register" method="POST" enctype="multipart/form-data">
             <div class="datos">
-                <input type="text" name="nombre_y_apellido" placeholder="Nombre y apellido">    
+                <input type="text" name="nombre_y_apellido" placeholder="Nombre y apellido" class="input-check is-invalid">    
+            <% if (locals.errors && errors.nombre_y_apellido) { %>
+                <div class="text-danger" > <%= errors.nombre_y_apellido.msg %> </div>
+            <% } %>
             </div>
             <div class="datos">
-                <input type="email" name="email" placeholder="Email">    
+                <input type="email" name="email" placeholder="Email">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger" > <%= errors.email.msg %> </div>
+                <% } %>    
             </div>
             <div class="datos">
-                <input type="password" name="contraseña" placeholder="Escriba su contraseña">    
+                <input class="contraseña" type="password" name="contraseña" placeholder="Escriba su contraseña">
+                <% if (locals.errors && errors.contraseña) { %>
+                    <div class="text-danger" > <%= errors.contraseña.msg %> </div>
+                <% } %>     
             </div>
+
+            <div class="datos">
+                <input class="confirmar" type="password" name="confirmar" placeholder="Confirme su contraseña"> 
+                <% if (locals.errors && errors.confirmar) { %>
+                    <div class="text-danger" > <%= errors.confirmar.msg %> </div>
+                <% } %> 
+            </div> 
+
             <div class="datos">
                     <label>Imagen de perfil:</label>
                     <img src="" alt="" id="imgPreview">
                         <input type="file" name="avatar">
+                        <% if (locals.errors && errors.imagePerfil) { %>
+                            <div class="text-danger" > <%= errors.imagePerfil.msg %> </div>
+                            
+                        <% } %>        
                         </div>
-           <!-- <div class="datos">
-                <input type="password" name="confirmeSuContraseña" placeholder="Confirme su contraseña">    
-            </div> -->
-            <div class="checkbox">
+            
+            <div class = "checkbox">
                 <label><input type="checkbox" checked> Quiero recibir promociones </label>
             </div>
             <div class="checkbox">
                 <input type="checkbox"> Acepto los <a href="#"> Términos y Condiciones </a> de Drinking Time, de su <a href="#"> Programa VIP </a> y su <a href="#"> Política de Privacidad </a> 
             </div>
             <div class="datos">
-                <button class="boton-rl" type="submit"> Registrarme </button>
+                <button id="boton-registro" class="boton-rl" type="button"> Registrarme </button>
             </div>
             <div class="datos"> 
                 ¿Ya sos cliente? <a href="/users/login"> Iniciar sesión </a> 
             </div>
+<script>
+    document.querySelector(".boton-rl").onclick = function(){
+        var contraseña = document.querySelector(".contraseña").value;
+        var confirmar = document.querySelector(".confirmar").value;
+
+        if (contraseña != confirmar){
+            alert("Las contraseñas no son iguales, intente de nuevo.")
+        } else {
+
+            document.getElementById("boton-registro").setAttribute("type", "submit")
+
+        }
+    };
+</script>
+
         </form>
     </section>
     <%- include ('../partials/footer.ejs') %>    

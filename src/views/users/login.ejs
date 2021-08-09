@@ -5,13 +5,7 @@
     <!-- Header -->
     <%- include ('../partials/header.ejs') %>
     
-    <% if (typeof errors != 'undefined') { %>
-        <ul>
-            <% for (const oneError in errors) { %>
-                <li class="text-danger"><%= errors[oneError].msg %></li>
-            <% } %>
-        </ul>
-    <% } %>
+   
     <!-- Sección principal -->
     <section class="registro-login">
         <div class="facebook"> 

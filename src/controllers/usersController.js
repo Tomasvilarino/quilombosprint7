@@ -94,7 +94,7 @@ processRegister: (req, res) => {
         return res.render("users/login", {
             errors: {
                 email: {
-                    msg: " Credenciales invalidas"
+                    msg: "Credenciales invalidas"
                 }
             }
         });

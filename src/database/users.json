@@ -5,5 +5,12 @@
   "email": "mariaeugenm@icloud.com",
   "contraseña": "$2a$10$kfIZkiJNvDqCQ9odBAirBOMh6NzV95csJpRlP6Oi1iifT/uJsFxyO",
   "avatar": "/avatar1627444648488.jpg"
+ },
+ {
+  "id": 2,
+  "nombre_y_apellido": "Tomas Vilariño",
+  "email": "tomasvila7@gmail.com",
+  "contraseña": "$2a$10$GW1DMQmFysnzoc6nzr2SZuPH/O8j6CrX2NEyrBS4oSm33ed8R6obG",
+  "avatar": "/avatar1628032627571.jpg"
  }
 ]
